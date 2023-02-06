@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    background-color: rgb(119, 208, 207) ;
+    color: black;
+}
+
+.navBar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: rgb(119, 208, 207) ;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+}
+.register{
+    display: flex;
+    flex-direction: row;
+}
+.register h4{
+    margin-right: 0.5em;
+}
+.sign{
+    border-left: 2px solid black;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80vh;
+    padding: 3em;
+}
+.body .content{
+    width: 40%;
+    margin-top: 15%;
+}
+.body .content h1{
+    font-weight: lighter;
+    font-size: 3em;
+}
+.body .content .CTA{
+    margin-top: 2em;
+}
+.body .content .CTA button, .total .btn .checkout{
+    width: 7em;
+    margin-right: 1em;
+    height: 2em;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+}
+.body .content .buy, .total .btn , .card .btn, .registrationForm .btn{
+    background-color: rgba(117, 179, 207, 0.5);
+}
+.body .content .shop{
+    background-color: #d5d8df;
+}
+.body .pic{
+    width: 40%;
+}
+.body .pic img{
+    width: 100%;
+    height: 90%;
+    margin-top: 10%;
+}
+.register a{
+    text-decoration: none;
+}
+.CTA a{
+    text-decoration: none;
+    background-color: transparent; 
+    color: black;
+}
+
+/* shop styling*/
+.navBarShop{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: rgb(119, 208, 207) ;
+}
+.shopBody{
+    display: grid;
+    column-gap: 2em;
+    row-gap: 2em;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 5em;
+}
+.card{
+    display: flex;
+    flex-direction:column ;
+    background-color: white;
+    color: black;
+    height: 40vh;
+    width: 33vw;
+    padding: 1em;
+    padding-bottom: 0;
+}
+.card a{
+    background-color: transparent;
+}
+.card div, .card h5,.card p, .card img{
+    background-color: white;
+}
+.card h5, .card p{
+   font-size: 1em;
+    margin-left:20%;
+}
+.card .btn{
+    margin-left: 10%;
+}
+.card img{
+    height: 50%;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20%;
+}
+.cartIcon span{
+    background-color: white;
+    font-size: 0.5em;
+    color: black;
+    position: relative;
+    top: -7px;
+    right: 4px;
+}
+.cartIcon button{
+    border: none;
+}
+/* cart styling */
+.navBarCart{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: rgb(119, 208, 207) ;  
+}
+.cartBody{
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(119, 208, 207) ;  
+}
+.cartItems{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(119, 208, 207) ;  
+}
+.cartItem{
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 1em;
+    padding-left: none;
+    padding-right: none;
+    height: 35vh;
+    margin-bottom: 2em;
+}
+.cartItem,.info, .amount, .details p, .details,
+ .info h6, .info p, .info .amount button{
+    background-color: white;
+}
+.cartItem img{
+    height:90%;
+    width: 40%;
+    background-color: white;
+}
+.details{
+    margin-left: 4em;
+    margin-top: 2em;
+    font-size: 0.55em;
+    width: 30%;
+}
+
+.amount button{
+    border: 1px solid black;
+    width: 1.5em;
+    margin-left: 0.25em;
+    border-radius: 3px;
+}
+.amount{
+    padding: 0.5em;
+    align-self: center;
+}
+
+.info p{
+   font-size: 1.1em;
+   padding: 0.5em;
+}
+.info h6{
+    padding: 0.5em;
+}
+.cartBody .total{
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 1em;
+    padding-left: 20%;
+    padding-right: none;
+    height: 15vh;
+    margin-bottom: 2em;
+}
+.cartBody .total .figures{
+    display: flex;
+    flex-direction: row;
+}
+.cartBody .total div h5, .total div{
+    background-color: white;
+}
+.cartBody .total div .cash{
+    font-weight: lighter;
+    margin-left: 2em;
+}
+.delete, .delete svg{
+    background-color: white;
+}
+.delete svg{
+    float: right;
+    margin-right: 1em;
+}
+.total .checkout{
+    width: 7em;
+}
+.cart .add{
+    width: 7em;
+    float: right;
+}
+.total a{
+    background-color: white;
+}
+
+/* login/ signup styling */
+.registrationForm{
+    width: 50%;
+    margin-left: 25%;
+    height: 80vh;
+    margin-top: 10vh;
+}
+.registrationForm form{
+    display: flex;
+    flex-direction: column;
+}
+.registrationForm form input{
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    margin: 1em;
+    height: 3em;
+    padding: 0.5em;
+}
+/* footer */
+.footerSection h3{
+    text-align: center;
+    text-decoration: underline;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+.footer .contactInfo{
+    width: 40%;
+}
+.location li, .socials li{
+    margin-bottom: 1em;
+}
+.socials h6{
+    font-style: italic;
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+.contactInfo h6{
+    font-size: 0.8em;
+    font-weight: lighter;
+    margin-left: 25%;
+}
+.footer .about{
+    width: 50%;
+    font-size: 0.75em;
+}
+.footer .socials{
+    width: 10%;
+    float: right;
+    margin-left: 3em;
+}
+.footer ul{
+    list-style-type: none;
+}
+.footer ul li{
+text-decoration:none ;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: black;
+}
+.registrationForm .btn{
+    width: 7em;
+    margin-left: 30%;
+}
