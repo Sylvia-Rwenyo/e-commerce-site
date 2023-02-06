@@ -7,6 +7,9 @@ import Register from './register.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const [cart, setCart] = useState([]);
+const [show, setShow] = useState(true);
+
   return (
    <BrowserRouter>
    <Routes>
