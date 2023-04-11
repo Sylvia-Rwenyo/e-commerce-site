@@ -69,7 +69,7 @@ function Cart({cart, setCart, handleChange}){
                         <h5>Total:</h5>
                         <h5 class="cash">Ksh {price}</h5>
                     </div>
-                    <Link to="checkout"><button class="btn checkout" >Checkout</button></Link>
+                    <Link to="/checkout"><button class="btn checkout" >Checkout</button></Link>
                 </div>
             </div>
             <div class="footerSection">

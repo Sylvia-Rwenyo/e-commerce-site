@@ -11,7 +11,7 @@ function Register(){
             <form>
                 <input type="text" name="emailAddress" placeholder='enter your email address'/>
                 <input type="text" name="password" placeholder='enter your password'/> 
-                <button class="btn" type="submit" name="register">Submit</button> 
+                <button class="btn add" type="submit" name="register">Submit</button> 
             </form>
         </div>
        </body>

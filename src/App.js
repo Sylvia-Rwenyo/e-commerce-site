@@ -20,6 +20,7 @@ function App() {
     arr[ind].quantity += d;
 
     if(arr[ind].quantity === 0) arr[ind].quantity = 1;
+    if(cart.length < 1) document.getElementsByClassName('badge').style.display = "none";
     setCart([...arr])
 }
 
