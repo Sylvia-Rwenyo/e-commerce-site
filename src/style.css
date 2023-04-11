@@ -95,8 +95,8 @@
     flex-direction:column ;
     background-color: white;
     color: black;
-    height: 40vh;
-    width: 33vw;
+    height: 40%;
+    width: 30vw;
     padding: 1em;
     padding-bottom: 0;
 }
@@ -239,14 +239,13 @@
 
 /* login/ signup styling */
 .registrationForm{
-    width: 50%;
-    margin-left: 25%;
-    height: 80vh;
     margin-top: 10vh;
 }
 .registrationForm form{
     display: flex;
     flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
 }
 .registrationForm form input{
     border: none;
@@ -255,6 +254,11 @@
     margin: 1em;
     height: 3em;
     padding: 0.5em;
+}
+.registrationForm form button{
+    margin: 1em;
+    border: 1px solid black;
+    margin-left: 30%;
 }
 /* footer */
 .footerSection h3{
@@ -268,7 +272,7 @@
     padding: 1em;
 }
 .footer .contactInfo{
-    width: 40%;
+    width: 20%;
 }
 .location li, .socials li{
     margin-bottom: 1em;
@@ -305,4 +309,44 @@ text-decoration:none ;
 .registrationForm .btn{
     width: 7em;
     margin-left: 30%;
+}
+/* checkout styling */
+.total h5{
+    background-color: white;
+}
+.paymentForm{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    display: none;
+}
+.paymentForm form, .paymentOption{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}
+.paymentForm form input{
+    margin: 0.5em;
+    height: 2em;
+    width: 90%;
+    margin-left: 5%;
+    border: none;
+    border-bottom: 2px solid black;
+}
+.paymentForm form .add{
+    background-color: rgba(117, 179, 207, 0.5);
+    border: none;
+    width: 7em;
+    height: 2.5em;
+    margin-left: 45%;
+}
+.paymentOption h6, span{
+    text-align: center;
+
+}
+.cardInfo .bankInfo{
+    display: none;
 }
