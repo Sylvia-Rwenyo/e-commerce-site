@@ -1,6 +1,7 @@
-import React from 'react'
-import './style.css'
-import Items from './items.js'
+import React from 'react';
+import './style.css';
+import Items from './items.js';
+import Card from './card.js';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { FaShoppingCart } from 'react-icons/fa';
@@ -12,7 +13,7 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaLocationArrow } from 'react-icons/fa';
 
-function Shop({addToCart}){
+function Shop({number, addToCart}){
     return(
        <body>
             <div class="navBarShop">
@@ -20,19 +21,12 @@ function Shop({addToCart}){
                     <h4>Shop</h4>
                 </div>
                 <div class="cartIcon">
-                <Link to="cart"><button><FaShoppingCart/><span class="badge">2</span></button></Link>
+                <Link to="/cart"><button><FaShoppingCart/><span class="badge">{number}</span></button></Link>
                 </div>
             </div>
             <div class="shopBody">
             {Items.map((item) =>(
-                <div class="card" key={item.id} item={item} addToCart={addToCart}>
-                    <img src={item.image} alt="for sale"/>
-                    <div>
-                        <h5>{item.name}</h5>
-                        <p>Ksh {item.price}</p>
-                        <Link to="cart"><button class="btn add" >Add to cart</button></Link>
-                    </div>
-                </div>
+                <Card key={item.id} item={item} addToCart={addToCart}/>
             ))}
             </div>
             <div class="footerSection">

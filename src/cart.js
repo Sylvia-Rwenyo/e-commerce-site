@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import './style.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Checkout from './checkout.js';
+import './shop.js';
 import { Link} from "react-router-dom";
 import { FaTrash } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -13,22 +13,6 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaLocationArrow } from 'react-icons/fa';
 
-const [cart, setCart] = useState([]);
-const [show, setShow] = useState(true);
-const addToCart = (item) => {
-    if(cart.indexOf(item) !== -1) return;
-    setCart([...cart, item]);
-  }
-  
-  const handleChange = (item, d) => {
-    const ind = cart.indexOf(item);
-    const arr = cart;
-    arr[ind].quantity += d;
-  
-    if(arr[ind].quantity === 0) arr[ind].quantity = 1;
-    setCart([...arr])
-  }
-  
 
 function Cart({cart, setCart, handleChange}){
     const [price, setPrice] = useState(0);
@@ -56,7 +40,7 @@ function Cart({cart, setCart, handleChange}){
                     <h4>Cart</h4>
                 </div>
                 <div class="cartIcon">
-                <button><FaShoppingCart/><span class="badge">2</span></button>
+                <button><FaShoppingCart/><span class="badge"></span></button>
                 </div>
             </div>
             <div class='cartBody'>
@@ -65,18 +49,17 @@ function Cart({cart, setCart, handleChange}){
                     <div class="cartItem">
                         <img src={item.image} alt="item for sale"/>
                         <div class="info">
-                            <h6>Headphones</h6>
+                            <h6>{item.name}</h6>
                             <div class="amount">
-                                <button class="add" onClick={() => handleChange(item, 1)}>-</button>
+                                <button class="add" onClick={() => handleChange(item, -1)}>-</button>
                                 <button class="number">{item.quantity}</button>
-                                <button class="subtract" onClick={() => handleChange(item, -1)}>+</button>
+                                <button class="subtract" onClick={() => handleChange(item, 1)}>+</button>
                             </div>
-                            <p>Ksh 2500</p>
+                            <p>Ksh {item.price}</p>
                             <div class="delete" onClick={() => handleRemove(item.id)}><FaTrash/></div>
                         </div>
                         <div class="details">
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                             inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <p>{item.details}</p>
                         </div>
                     </div>
                 )))}
