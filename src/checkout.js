@@ -9,17 +9,8 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaLocationArrow } from 'react-icons/fa';
 
-function Checkout({price}){
-    
-const select = (choice) => {
-    if(choice === 'card'){
-        document.getElementById('cardInfo').style.display ="block";
-        document.getElementById('paymentOption').style.display ="none";
-    }else if(choice === 'bank'){
-        document.getElementById('bankInfo').style.display ="block";  
-        document.getElementById('paymentOption').style.display ="none"; 
-    }
-}
+
+function Checkout(){
     return(
         <body>
             <div class="navBarCart">
@@ -28,27 +19,7 @@ const select = (choice) => {
             <div class='cartBody'>
                 <div class="total">
                     <h5>Total:</h5>
-                    <h5 class="cash">Ksh {price}</h5>
-                </div>
-                <div className='paymentOption' id='paymentOption'>
-                    <h6>Select payment option</h6>
-                    <span>Credit card&nbsp;<input type='checkbox' onClick={select('card')}/>&nbsp;&nbsp;&nbsp;
-                    Bank account&nbsp;<input type='checkbox' onClick={select('bank')}/></span>
-                </div>
-                <div className="paymentForm" id="paymentForm">
-                    <form class="cardInfo" id="cardInfo">
-                        <input name="cardName" type="text" />
-                        <input name="accountNumber" type="number" />
-                        <input name="date" type="date" />
-                        <input name="cvc" type="text" />
-                        <input name="addCard" type="submit" class="btn add" value="Add card" />
-                    </form>
-                    <form class="bankInfo" id="bankInfo">
-                        <input name="account" type="text" />
-                        <input name="accountNumber" type="number" />
-                        <input name="routingnumber" type="number" />
-                        <input name="addCard" type="submit" value="Add account" />
-                    </form>
+                    <h5 class="cash">Ksh 4000</h5>
                 </div>
             </div>
             <div class="footerSection">
